@@ -3319,7 +3319,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 GojoMdNx.sendContact(m.chat, global.owner, m)
             }
             break
-case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite':case 'yeet':case 'neko':case 'bully':case 'bonk':case 'wink':case 'poke':case 'nom':case 'slap':case 'smile':case 'wave':case 'awoo':case 'blush':case 'smug':case 'glomp':case 'happy':case 'dance':case 'cringe':case 'cuddle':case 'highfive':case 'shinobu':case 'megumin':case 'handhold':
+case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'bite':case 'yeet':case 'neko':case 'bully':case 'bonk':case 'wink':case 'poke':case 'nom':case 'slap':case 'smile':case 'wave':case 'awoo':case 'blush':case 'smug':case 'glomp':case 'happy':case 'dance':case 'cringe':case 'cuddle':case 'highfive':case 'shinobu':case 'megumin':case 'handhold':
 
 					reply(mess.wait)
 					axios.get(`https://api.waifu.pics/sfw/${command}`)
@@ -3360,11 +3360,11 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             hydratedFooterText: `┌─❖
 ┌─❖ مـرحبـاً 🤗 」
 └┬❖ 「 ${pushname} 」
-││✑「مـعـك بـوت غـوجـو 👋🏻」◣
-││✑「مـن مـمـلـكـة غولد 🤗」◣
+││✑「مـعـك بـوت شانكس 👋🏻」◣
+││✑「مـن مـمـلـكـة نايت 🤗」◣
 │└───────────────┈ ⳹
  「 مـعـلـومـات عـن الـبـوت 」
-│✙「 اسـم الـبـوت 」◣ : 「 غوجو ✨🤞🏻 」◣
+│✙「 اسـم الـبـوت 」◣ : 「 شانكس ✨🤞🏻 」◣
 │✙「 رقـم الـمـالـك 」◣ : ${global.owner}
 │✙「عـدد الـمـسـتـخـدمـيـن」◣ : ${Object.keys(global.db.data.users).length}
 └┬──────────────┈ ⳹
@@ -3372,12 +3372,12 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
    └───────────────┈ ⳹`,
                              hydratedButtons: [{
                                 urlButton: {
-                                    displayText: '「 قناتي 」「📍」◣',
+                                    displayText: '「 استقبال 2」「📍」◣',
                                     url: `${myweb}`
                                 }
                             }, {
                             	urlButton: {
-                                displayText: '「 رابط الاستقبال 」「📌」◣',
+                                displayText: '「 استقبال 1 」「📌」◣',
                                     url: `${sc}`
                                 }
                             }, {
@@ -3415,11 +3415,11 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             hydratedFooterText: `
 ┌─❖ مـرحبـاً 🤗 」
 └┬❖ 「 ${pushname} 」
-││✑「مـعـك بـوت غـوجـو 👋🏻」◣
-││✑「مـن مـمـلـكـة غولد 🤗」◣
+││✑「مـعـك بـوت شانكس 👋🏻」◣
+││✑「مـن مـمـلـكـة نايت 🤗」◣
 │└───────────────┈ ⳹
  「 مـعـلـومـات عـن الـبـوت 」
-│✙「 اسـم الـبـوت 」◣ : 「 غوجو ✨🤞🏻 」◣
+│✙「 اسـم الـبـوت 」◣ : 「 شانكس ✨🤞🏻 」◣
 │✙「 رقـم الـمـالـك 」◣ : ${global.owner}
 │✙「عـدد الـمـسـتـخـدمـيـن」◣ : ${Object.keys(global.db.data.users).length}
 └┬──────────────┈ ⳹
@@ -3427,12 +3427,12 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
    └───────────────┈ ⳹`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: '「 قناتي 」「📍」◣',
+                                    displayText: '「 استقبال 1」「📍」◣',
                                     url: `${myweb}`
                                 }
                             }, {
                             	urlButton: {
-                                displayText: '「 رابط الاستقبال 」「📌」◣',
+                                displayText: '「 استقبال 2 」「📌」◣',
                                     url: `${sc}`
                                 }
                             }, {
@@ -3461,11 +3461,12 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `「 مرحبا 👋🏻  」◣
-		    「 معك بوت غوجو 🤗 」◣
+		    「 معك بوت شانكس 🤗 」◣
 		    「 افضل بوت عربي 」◣
- 「 رابط فرع التعليم على البوت」◣
-		    「https://chat.whatsapp.com/CKLmAGJo3iw5AvNM1KZee3」◣
-		    「 الي محتاج شروحات ينضم 」◣`,
+                    「 رابط استقبال سوردز」◣
+		    「https://chat.whatsapp.com/G8GW7Nx1wU229JcKPuBFg7」◣
+		    「 رابط استقبال بارادايس 」◣`
+                    「https://chat.whatsapp.com/Bd0p3m3kvIf8XKynM3r9kG」◣,
                     description: `「 اختر قائمة من فضلك 」◣`,
                     buttonText: "「 القائمة 」◣",
                     footerText: `「 تحت الصيانة ⚙️」◣`,
@@ -3591,15 +3592,24 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                 GojoMdNx.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c15f725add0381fb69c4b.jpg' }, caption: `` }, { quoted: m })
             }
             break
-            case 'التسجhgjيل': case 'التسجيل': {
-                reply(`「 الفرع الخاص ل التعليم على البوت 」◣
+            case 'فروع': case 'فرع': {
+                reply(`┍─━─━──┙◆┕─━─━──┑
+⚔️┊فرع الملصاقات↶
+https://chat.whatsapp.com/GX0KPXw8E9k9CObQO4RT9R
+❮✺┃╼╾╼╾⊱🔱⊰╼╾╼╾┃✺❯
+⚔️┊فرع خلفيات↶
+https://chat.whatsapp.com/CvOo5uFDW0k7NRwty39HgX
 
-「 _https://chat.whatsapp.com/CKLmAGJo3iw5AvNM1KZee3_ 」◣
+❮✺┃╼╾╼╾⊱🐉⊰╼╾╼╾┃✺❯
+⚔️┊فرع الاديت↶
+https://chat.whatsapp.com/JsICzmFvSgy0qPGeTiiwCU
+
+└─⊰✫⊱──⊰✫⊱──⊰✫⊱─┘
 
 「 نرحب بالجميع. 」◣`)
             }
             break
-case '9807786789678': {
+case 'مينيو': {
   	anu = `
 ┏━「 *${botname}* 」━━⭓ 
 ┃╔══☯︎「 MAIN 」☯︎
