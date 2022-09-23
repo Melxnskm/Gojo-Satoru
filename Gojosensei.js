@@ -1181,7 +1181,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
 				if (!text) return replay(`Use Text, Example : ${prefix + command} he married `)
 					const apa = [`اتفق الف`,`ادلف انتا و هو`,`محصلش`,`ايي`,`عمك`,`وش رايك انت`,`ممكن`,`صح`,`تقصد نفسك ؟`,`حصل`,`اتفق`,`وش دراني انا`,`حصل`,`وش دخلك`]
 					const kah = apa[Math.floor(Math.random() * apa.length)]
-GojoMdNx.sendMessage(from, { text: `Question : Is ${q}\nAnswer : ${kah}` }, { quoted: m })
+GojoMdNx.sendMessage(from, { text: `السؤال : هل ${q}\nالجواب : ${kah}` }, { quoted: m })
 
 					break
 					            case 'what':
