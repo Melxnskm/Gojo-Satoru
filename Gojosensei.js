@@ -3465,8 +3465,8 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 		    「 افضل بوت عربي 」◣
                     「 رابط استقبال سوردز」◣
 		    「https://chat.whatsapp.com/G8GW7Nx1wU229JcKPuBFg7」◣
-		    「 رابط استقبال بارادايس 」◣`
-                    「https://chat.whatsapp.com/Bd0p3m3kvIf8XKynM3r9kG」◣,
+		    「 رابط استقبال بارادايس 」◣
+                    「https://chat.whatsapp.com/Bd0p3m3kvIf8XKynM3r9kG」◣`,
                     description: `「 اختر قائمة من فضلك 」◣`,
                     buttonText: "「 القائمة 」◣",
                     footerText: `「 تحت الصيانة ⚙️」◣`,
