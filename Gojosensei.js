@@ -1177,9 +1177,9 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
                     await GojoMdNx.sendButtonText(m.chat, buttons, jawab, GojoMdNx.user.name, m, {mentions: menst})
             }
             break
-            case 'is':
+            case 'هل':
 				if (!text) return replay(`Use Text, Example : ${prefix + command} he married `)
-					const apa = [`Yes`, `No`, `It Could Be`, `Thats right`]
+					const apa = [`اتفق الف`,`ادلف انتا و هو`,`محصلش`,`ايي`,`عمك`,`وش رايك انت`,`ممكن`,`صح`,`تقصد نفسك ؟`,`حصل`,`اتفق`,`وش دراني انا`,`حصل`,`وش دخلك`]
 					const kah = apa[Math.floor(Math.random() * apa.length)]
 GojoMdNx.sendMessage(from, { text: `Question : Is ${q}\nAnswer : ${kah}` }, { quoted: m })
 
@@ -1847,12 +1847,12 @@ break
                  GojoMdNx.sendTextWithMentions(m.chat, teks, m)
              }
              break
-             case 'قائمة المتصلين': case 'المتصلين': {
-                    let id = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : m.chat
-                    let online = [...Object.keys(store.presences[id]), botNumber]
-                    GojoMdNx.sendText(m.chat, '「 الموجودين الأن 」◣\n\n' + online.map(v => '👤 @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
-             }
-             break
+             //case 'قائمة المتصلين': case 'المتصلين': {
+                    //let id = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : m.chat
+                    //let online = [...Object.keys(store.presences[id]), botNumber]
+                    //GojoMdNx.sendText(m.chat, '「 الموجودين الأن 」◣\n\n' + online.map(v => '👤 @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
+             //}
+             //break
             case 'ملصق': case 's': case 'ستيكر': case 'س': {
             if (!quoted) return replay(`Reply Video/Image With Caption ${prefix + command}`)
             reply(mess.wait)
@@ -3465,8 +3465,8 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 		    「 افضل بوت عربي 」◣
                     「 رابط استقبال سوردز」◣
 		    「https://chat.whatsapp.com/G8GW7Nx1wU229JcKPuBFg7」◣
-		    「 رابط استقبال بارادايس 」◣
-                    「https://chat.whatsapp.com/Bd0p3m3kvIf8XKynM3r9kG」◣`,
+		    「 رابط استقبال بارادايس 」◣`
+                    「https://chat.whatsapp.com/Bd0p3m3kvIf8XKynM3r9kG」◣,
                     description: `「 اختر قائمة من فضلك 」◣`,
                     buttonText: "「 القائمة 」◣",
                     footerText: `「 تحت الصيانة ⚙️」◣`,
@@ -3562,22 +3562,22 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								]
 							},
 							{
-								"title": "المملكة",
+								"title": "فروع المملكة",
 								"rows": [
 									{
-										"title": "قائمة استمارات مملكة غولد",
+										"title": "فرع الاديت",
 										"description": ".17.",
-										"rowId": `${prefix}anon`
+										"rowId": `${prefix}اديت`
 									}
 								]
 							},
 							{
-								"title": "نبذة",
+								"title": "فرع 2",
 								"rows": [
 									{
-										"title": "تاريخ مملكة غولد",
+										"title": "فرع الخلفيات",
 										"description": ".18.",
-										"rowId": `${prefix}tqtt`
+										"rowId": `${prefix}خلفيات`
 									}
 								]
 							}
@@ -3595,7 +3595,8 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             case 'فروع': case 'فرع': {
                 reply(`┍─━─━──┙◆┕─━─━──┑
 ⚔️┊فرع الملصاقات↶
-https://chat.whatsapp.com/GX0KPXw8E9k9CObQO4RT9R
+
+غير متوفر حاليا
 ❮✺┃╼╾╼╾⊱🔱⊰╼╾╼╾┃✺❯
 ⚔️┊فرع خلفيات↶
 https://chat.whatsapp.com/CvOo5uFDW0k7NRwty39HgX
@@ -3882,7 +3883,6 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╔═✪「 المجموعات 」	        
 ┃╠المنشن
 ┃╠المنشن.المخفي
-┃╠المتصلين
 ┃╠الرابط
 ┃╠اضافة
 ┃╠ترقية 
@@ -3902,10 +3902,6 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╔═✪「 الألعاب 」	        
 ┃╠الاكس او | ttt
 ┃╠حذف الاكس او | delttt
-┃╠الكتابة | كت
-┃╠الكتابة | كتت
-┃╠الكتابة | كتتت
-┃╠بوت اعمل فعالية المارد
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
@@ -4065,38 +4061,13 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
-case 'anon':
+case 'اديت':
 var unicorn = await getBuffer(picak+'.17.')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔══✪「 الاستمارات 」	        
-    「 القوانين 」
-    「 الترحيب 」
-    「 اعلان ترقية | اعلان تخفيض」
-    「 استمارة | الاستمارة 」
-    「 قائمة الالقاب 」
-    「 سؤال 」
-    「 امونق اس 」
-    「 فعالية التصاميم 」
-    「 فعالية الجرس 」
-    「 فعالية الديث نوت 」
-    「 فعالية الصور 」
-    「 فعالية الكراسي 」
-    「 فعالية الفرق 」
-    「 فعالية القلوب 」
-    「 فعالية مين الاسرع 」
-    「 فعالية المارد 」
-    「 مسابقة 」
-    「 مسابقة القنابل 」
-    「 بطاقة تغيير صورة الجروب 」
-    「 بطاقة تجميع صور 」
-    「 بطاقة تغيير القب 」
-    「 بطاقة حذف انذار 」
-    「 بطاقة سرقة القب 」
-    「 بطاقة سخرية 」
-    「 بطاقة طرد 」
-    「 بطاقة تطهير طرد 」
-    「 بطاقة مشرف 」
+┃╔══✪「 edit 」	        
+    「 https://chat.whatsapp.com/JsICzmFvSgy0qPGeTiiwCU 」
+   
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
@@ -4129,9 +4100,9 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
-case 'thanksto': case 'tqto': case 'tqtt':
+case 'thanksto': case 'tqto': case 'خلفيات':
 var unicorn = await getBuffer(picak+'.18.')
-await GojoMdNx.send5ButImg(from, `` + '' + ' ', `مملكة غولد كانت تضم حوالي 50 نقابة كانت من افضل الممالك قديما بقيادة الامبراطور توشيرو والنائب ساتومي من نأحية التحديات والمسابقات كانت المملكة من الاوائل وقتها لكن في مرة من الايام تعطل هاتف الامبراطور توشيرو واختفى حوالي سنتين وعندما عاد  اختفت المملكة وكل شيء  والان هو يحاول ان يحيئ مملكته من البداية التي لاتضم اي نقابة حاليا وخطوته الاولى كانت بأن يعمل بوت وهو انا كيف تشوفوني ؟ ههه مو مشكلة المهم توشيرو  يقول اذا بدكم تنضمون معنا اضغطو ع زر رابط الاستقبال.`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
+await GojoMdNx.send5ButImg(from, `` + '' + ' ', `https://chat.whatsapp.com/CvOo5uFDW0k7NRwty39HgX.`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
             default:
                 if (budy.startsWith('=>')) {
